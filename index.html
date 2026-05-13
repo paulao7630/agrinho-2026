@@ -9,3 +9,311 @@
     
 </body>
 </html>
+import { ImageWithFallback } from './components/figma/ImageWithFallback';
+
+export default function App() {
+  const practices = [
+    {
+      icon: '🌱',
+      title: 'Agricultura Regenerativa',
+      description: 'Práticas que restauram a saúde do solo, aumentam a biodiversidade e capturam carbono da atmosfera.'
+    },
+    {
+      icon: '💧',
+      title: 'Gestão Inteligente de Água',
+      description: 'Sistemas de irrigação eficientes e técnicas de conservação que reduzem o desperdício de recursos hídricos.'
+    },
+    {
+      icon: '🔄',
+      title: 'Economia Circular',
+      description: 'Aproveitamento total dos recursos, transformando resíduos em insumos e minimizando o impacto ambiental.'
+    },
+    {
+      icon: '🌾',
+      title: 'Rotação de Culturas',
+      description: 'Diversificação de plantios que preserva nutrientes do solo e reduz a necessidade de agroquímicos.'
+    },
+    {
+      icon: '🐝',
+      title: 'Preservação da Biodiversidade',
+      description: 'Proteção de polinizadores e fauna local através de corredores ecológicos e áreas de preservação.'
+    },
+    {
+      icon: '⚡',
+      title: 'Energia Renovável',
+      description: 'Integração de fontes limpas de energia como solar e biomassa nas operações agrícolas.'
+    }
+  ];
+
+  const stats = [
+    { value: '45%', label: 'Redução de emissões de CO₂' },
+    { value: '60%', label: 'Economia de água' },
+    { value: '35%', label: 'Aumento de produtividade' },
+    { value: '80%', label: 'Recuperação de áreas degradadas' }
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <header className="bg-white shadow-sm sticky top-0 z-50">
+        <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <span className="text-2xl">🌿</span>
+            <span className="text-green-800">AgroForte</span>
+          </div>
+          <div className="hidden md:flex gap-8">
+            <a href="#sobre" className="text-slate-700 hover:text-green-600 transition-colors">Sobre</a>
+            <a href="#praticas" className="text-slate-700 hover:text-green-600 transition-colors">Práticas</a>
+            <a href="#impacto" className="text-slate-700 hover:text-green-600 transition-colors">Impacto</a>
+            <a href="#contato" className="text-slate-700 hover:text-green-600 transition-colors">Contato</a>
+          </div>
+          <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg transition-colors">
+            Saiba Mais
+          </button>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative h-[600px] overflow-hidden">
+        <ImageWithFallback
+          src="https://images.unsplash.com/photo-1761120812719-33af632a3f67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdXN0YWluYWJsZSUyMGFncmljdWx0dXJlJTIwZmFybSUyMGdyZWVufGVufDF8fHx8MTc3NzQ2MTY5Mnww&ixlib=rb-4.1.0&q=80&w=1080"
+          alt="Campo agrícola sustentável"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 to-transparent"></div>
+        <div className="absolute inset-0 flex items-center">
+          <div className="max-w-7xl mx-auto px-4 w-full">
+            <div className="max-w-2xl">
+              <h1 className="text-white text-5xl md:text-6xl mb-6">
+                Agro Forte, Futuro Sustentável
+              </h1>
+              <p className="text-green-100 text-xl md:text-2xl mb-8">
+                O equilíbrio perfeito entre produção agrícola eficiente e preservação do meio ambiente
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg transition-colors">
+                  Nossas Soluções
+                </button>
+                <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-8 py-3 rounded-lg transition-colors border border-white/30">
+                  Assista ao Vídeo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sobre Section */}
+      <section className="py-20 px-4 bg-slate-50" id="sobre">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-green-600 uppercase tracking-wide">Nossa Missão</span>
+              <h2 className="text-4xl md:text-5xl text-slate-900 mt-2 mb-6">
+                Equilibrando Produtividade e Sustentabilidade
+              </h2>
+              <p className="text-slate-600 text-lg mb-6">
+                Acreditamos que a agricultura moderna pode e deve ser produtiva sem comprometer o meio ambiente.
+                Através de tecnologias inovadoras e práticas sustentáveis, demonstramos que é possível aumentar
+                a produção enquanto regeneramos ecossistemas.
+              </p>
+              <p className="text-slate-600 text-lg mb-8">
+                Nossa abordagem integra conhecimento tradicional com ciência de ponta, criando sistemas agrícolas
+                resilientes que beneficiam produtores, consumidores e o planeta.
+              </p>
+              <div className="flex gap-4">
+                <div className="text-center">
+                  <div className="text-green-600 text-3xl mb-2">15+</div>
+                  <div className="text-slate-600">Anos de Experiência</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-green-600 text-3xl mb-2">500+</div>
+                  <div className="text-slate-600">Fazendas Parceiras</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-green-600 text-3xl mb-2">100k+</div>
+                  <div className="text-slate-600">Hectares Recuperados</div>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <ImageWithFallback
+                src="https://images.unsplash.com/photo-1688320243376-69b68a8f656f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxzdXN0YWluYWJsZSUyMGFncmljdWx0dXJlJTIwZmFybSUyMGdyZWVufGVufDF8fHx8MTc3NzQ2MTY5Mnww&ixlib=rb-4.1.0&q=80&w=1080"
+                alt="Plantação sustentável"
+                className="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-green-600 text-white p-6 rounded-xl shadow-lg">
+                <div className="text-3xl mb-1">98%</div>
+                <div className="text-green-100">Satisfação dos Produtores</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Práticas Sustentáveis */}
+      <section className="py-20 px-4" id="praticas">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-green-600 uppercase tracking-wide">Nossas Práticas</span>
+            <h2 className="text-4xl md:text-5xl text-slate-900 mt-2 mb-4">
+              Agricultura Sustentável na Prática
+            </h2>
+            <p className="text-slate-600 text-lg max-w-3xl mx-auto">
+              Implementamos soluções comprovadas que transformam a forma como produzimos alimentos,
+              respeitando os limites do planeta.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {practices.map((practice, index) => (
+              <div
+                key={index}
+                className="bg-white border border-slate-200 rounded-xl p-8 hover:shadow-xl hover:border-green-300 transition-all"
+              >
+                <div className="text-5xl mb-4">{practice.icon}</div>
+                <h3 className="text-slate-900 text-xl mb-3">{practice.title}</h3>
+                <p className="text-slate-600">{practice.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Impacto e Estatísticas */}
+      <section className="py-20 px-4 bg-green-600" id="impacto">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-white text-4xl md:text-5xl mb-4">
+              Resultados Comprovados
+            </h2>
+            <p className="text-green-100 text-lg max-w-3xl mx-auto">
+              Nossos métodos sustentáveis geram impacto positivo mensurável tanto na produtividade
+              quanto na preservação ambiental.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                <div className="text-white text-5xl mb-2">{stat.value}</div>
+                <div className="text-green-100 text-lg">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 md:p-12">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-white text-3xl mb-4">Tecnologia a Serviço da Natureza</h3>
+                <p className="text-green-100 mb-6">
+                  Utilizamos sensores IoT, análise de dados e inteligência artificial para otimizar
+                  o uso de recursos, monitorar a saúde do solo e prever padrões climáticos.
+                  Isso nos permite tomar decisões precisas que maximizam resultados enquanto
+                  minimizam impactos ambientais.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-3 text-green-100">
+                    <svg className="w-6 h-6 text-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Monitoramento em tempo real da qualidade do solo
+                  </li>
+                  <li className="flex items-center gap-3 text-green-100">
+                    <svg className="w-6 h-6 text-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Previsão climática com 95% de precisão
+                  </li>
+                  <li className="flex items-center gap-3 text-green-100">
+                    <svg className="w-6 h-6 text-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Irrigação de precisão com economia de até 60% de água
+                  </li>
+                </ul>
+              </div>
+              <div className="relative">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1767880408467-f8a3ac3741af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxzdXN0YWluYWJsZSUyMGFncmljdWx0dXJlJTIwZmFybSUyMGdyZWVufGVufDF8fHx8MTc3NzQ2MTY5Mnww&ixlib=rb-4.1.0&q=80&w=1080"
+                  alt="Campo verde sustentável"
+                  className="w-full h-[400px] object-cover rounded-xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 px-4" id="contato">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-slate-900 text-4xl md:text-5xl mb-6">
+            Pronto para Transformar sua Produção?
+          </h2>
+          <p className="text-slate-600 text-lg mb-8">
+            Junte-se a centenas de produtores que já descobriram como aumentar a produtividade
+            enquanto preservam o meio ambiente para as próximas gerações.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg transition-colors">
+              Agendar Consultoria Gratuita
+            </button>
+            <button className="border-2 border-green-600 text-green-600 hover:bg-green-50 px-8 py-4 rounded-lg transition-colors">
+              Baixar Material Informativo
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-900 py-12 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <span className="text-2xl">🌿</span>
+                <span className="text-white">AgroForte</span>
+              </div>
+              <p className="text-slate-400">
+                Construindo o futuro da agricultura sustentável, hoje.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-white mb-4">Soluções</h4>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-slate-400 hover:text-green-400 transition-colors">Consultoria</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-green-400 transition-colors">Tecnologia</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-green-400 transition-colors">Treinamento</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white mb-4">Recursos</h4>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-slate-400 hover:text-green-400 transition-colors">Blog</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-green-400 transition-colors">Estudos de Caso</a></li>
+                <li><a href="#" className="text-slate-400 hover:text-green-400 transition-colors">Webinars</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white mb-4">Contato</h4>
+              <ul className="space-y-2 text-slate-400">
+                <li>contato@agroforte.com.br</li>
+                <li>(11) 9999-9999</li>
+                <li>São Paulo, Brasil</li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-slate-400">© 2026 AgroForte. Todos os direitos reservados.</p>
+            <div className="flex gap-6">
+              <a href="#" className="text-slate-400 hover:text-green-400 transition-colors">LinkedIn</a>
+              <a href="#" className="text-slate-400 hover:text-green-400 transition-colors">Instagram</a>
+              <a href="#" className="text-slate-400 hover:text-green-400 transition-colors">YouTube</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
